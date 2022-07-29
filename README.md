@@ -1,4 +1,5 @@
 # Wallpal
+deno desktop wallpaper application
 
 ## Requirements
 - linux, X11. Mac support is WIP
