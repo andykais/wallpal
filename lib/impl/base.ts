@@ -1,5 +1,4 @@
 // std modules
-import * as fs from 'std/fs'
 import * as yaml from "std/encoding/yaml.ts";
 import { type ConfigurationFile, DEFAULT_CONFIG } from '/lib/config.ts'
 
@@ -43,7 +42,7 @@ abstract class WallPal {
   }
 
   protected async read_config(config_file: string) {
-    const filepath = this.resolve_path(this.config_file)
+    const filepath = this.resolve_path(config_file)
     const file_contents = await Deno.readTextFile(filepath)
     const parsed_contents = yaml.parse(file_contents) as Partial<ConfigurationFile>
     const merged_config = {...DEFAULT_CONFIG, ...parsed_contents}

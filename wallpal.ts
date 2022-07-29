@@ -1,5 +1,4 @@
 // std modules
-import * as fs from 'std/fs'
 import * as flags from 'std/flags'
 import * as yaml from "std/encoding/yaml.ts";
 // local imports

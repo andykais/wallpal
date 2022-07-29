@@ -7,7 +7,7 @@ import { WallPal, Action, DaemonData, FileInfo, MessageContract } from '/lib/imp
 class WallPalDaemon extends WallPal {
   private interval: number | undefined
   private live_wallpaper_proc: Deno.Process | undefined
-  private wallpaper_index: number = 0
+  private wallpaper_index = 0
   private wallpaper_dir: FileInfo[] = []
 
   public async do_action(action: Action) {
@@ -175,7 +175,7 @@ class WallPalDaemon extends WallPal {
       followSymlinks: true,
     })
     for await (const { path, isFile } of walk_iterator) {
-      walked_files.push(path)
+      if (isFile) walked_files.push(path)
     }
     if (this.config.random_order) {
       walked_files.sort(() => 0.5 - Math.random())
