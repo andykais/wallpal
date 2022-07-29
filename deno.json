@@ -1,7 +1,11 @@
 {
   "tasks": {
-    "develop:daemon": "deno run --watch --check --unstable --allow-read --allow-write --allow-env=HOME wallpal.ts daemon",
+    // we have to allow _all_ run commands right now because of how proc.kill works
+    // Follow https://github.com/denoland/deno/issues/15217 to see when we can use this command instead
+    "develop:daemon": "deno run --watch --check --unstable --allow-read --allow-write --allow-env=HOME --allow-run=file,xsetroot,mpv,feh --no-prompt wallpal.ts daemon",
+    "develop:daemon": "deno run --watch --check --unstable --allow-read --allow-write --allow-env=HOME --allow-run --no-prompt wallpal.ts daemon",
     "develop:cli": "deno run --watch --check --unstable --allow-read --allow-write --allow-env=HOME wallpal.ts next",
+    "cli": "deno run --unstable --allow-read --allow-write --allow-env=HOME wallpal.ts"
   },
   "importMap": "import_map.json"
 }

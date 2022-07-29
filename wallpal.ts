@@ -3,7 +3,7 @@ import * as fs from 'std/fs'
 import * as flags from 'std/flags'
 import * as yaml from "std/encoding/yaml.ts";
 // local imports
-import { WallPalDaemon, WallPalClient, type Action } from './lib/impl/mod.ts'
+import { WallPalDaemon, WallPalClient, type Action } from '/lib/impl/mod.ts'
 
 const CONFIG_FILE = '~/.config/wallpal.yaml'
 

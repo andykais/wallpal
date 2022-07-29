@@ -4,6 +4,8 @@
     "std/io": "https://deno.land/std@0.149.0/io/mod.ts",
     "std/flags": "https://deno.land/std@0.149.0/flags/mod.ts",
     "std/encoding/": "https://deno.land/std@0.149.0/encoding/",
-    "keypress/": "https://deno.land/x/keypress@0.0.8/"
+    "keypress/": "https://deno.land/x/keypress@0.0.8/",
+    "/": "./",
+    "./": "./"
   }
 }

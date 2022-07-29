@@ -2,7 +2,6 @@ import { WallPal, Action, MessageContract } from './base.ts'
 
 class WallPalClient extends WallPal {
   async do_action(action: Action) {
-    await super.init()
     const ipc_socket_filepath = this.resolve_path(this.config.ipc_unix_socket)
     const conn = await Deno.connect({ path: ipc_socket_filepath, transport: 'unix' })
     const message: MessageContract = { action }
