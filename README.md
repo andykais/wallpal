@@ -28,7 +28,7 @@ wallpal prev
 wallpal refresh
 ```
 
-### i3
+### i3 Configuration
 Personally, I use this script as a wallpaper cycler for my i3 desktop. The my `~/.config/i3/config` looks something like this:
 ```i3config
 # start wallpal upon login
